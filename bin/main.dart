@@ -1,62 +1,58 @@
-// void main(){
-//   List<int> myNumber=[];
-//   myNumber.addAll([1,4,2,4,6]);
-//    myNumber.sort();
-//    print('$myNumber');
-//    myNumber.add(2);
-//    print('$myNumber');
-//    myNumber=myNumber.toSet().toList();
-//    print('$myNumber');
-//    myNumber=myNumber.reversed.toList();
-//   print('$myNumber');
-//   stringOperation();
-//
-// }
-//
-// void stringOperation(){
-//   String myName='MD ASIF AFROJ SHAYON';
-//    String removeSpace=myName.replaceAll(' ', '');
-//    print(removeSpace);
-//    String reversedName=removeSpace.split('').reversed.join('');
-//    print(reversedName);
-//
-// }
+
+
+
+import 'dart:io';
+
+import 'op.dart';
 
 void main(){
-
-  List<int> myNumber=[];
-  myNumber.addAll([10,20,5,15,50]);
-  myNumber.addAll([5,20,25,30]);
-  print('$myNumber');
-  myNumber=myNumber.toSet().toList();
-  print('$myNumber');
-myNumber.sort();
-  print('$myNumber');
- myNumber= myNumber.reversed.toList();
-  print('$myNumber');
-  myNumber.remove(20);
-  print('$myNumber');
-  stringOperation();
+print('Enter Values of T and V space by space');
+String? inputT=stdin.readLineSync();
+List<int> T=inputT!.split(' ').map(int.parse).toList();
+List<int> V=stdin.readLineSync()!.split(' ').map(int.parse).toList();
+intOperation(T, V)
+  // print('Enter numbers for T separated by spaces:');
+  // String? inputT=stdin.readLineSync();
+  // List<int> T=inputT!.split(' ').map(int.parse).toList();
+  // String? inputV=stdin.readLineSync();
+  // List<int> V=inputV!.split(' ').map(int.parse).toList();
+  // intOperation(T, V);
 }
 
-void stringOperation(){
-  String myname='MD ASIF SHAYON';
-
-  String removeSpace=myname.replaceAll(' ', '');
-  print(removeSpace);
-  String removeDuplicate=removeSpace.split('').toSet().join();
-  print(removeDuplicate);
-  String reversed=removeDuplicate.split('').reversed.join();
-  print(reversed);
-  List<String> charList=reversed.split('');
-  print('$charList');
-  charList.sort();
-  print(charList);
-  charList.addAll(['S','D','W']);
-  print(charList);
-  List<String> lowerChar=charList.map((char) => char.toLowerCase() ).toList();
-  print(lowerChar);
-  List<String> upperChar=lowerChar.map((char) => char.toUpperCase()).toList();
-  print(upperChar);
-
-}
+//import 'dart:io'; // Import the necessary library
+//
+// void main() {
+//   // Request user input for T
+//   print('Enter numbers for T separated by spaces:');
+//   String? inputT = stdin.readLineSync();
+//   List<int> T = inputT!.split(' ').map(int.parse).toList();
+//
+//   // Request user input for V
+//   print('Enter numbers for V separated by spaces:');
+//   String? inputV = stdin.readLineSync();
+//   List<int> V = inputV!.split(' ').map(int.parse).toList();
+//
+//   // Call the function with user inputs
+//   intOperation(T, V);
+// }
+//
+// void intOperation(List<int> T, List<int> V) {
+//   List<int> myNum = [];
+//   myNum.addAll(V);   // Add elements from V
+//   myNum.addAll(T);   // Add elements from T
+//
+//   // Remove duplicates by converting to Set, then back to List
+//   myNum = myNum.toSet().toList();
+//
+//   // Reverse the list
+//   myNum = myNum.reversed.toList();
+//
+//   // Add 51 to the list
+//   myNum.add(51);
+//
+//   // Sort the list
+//   myNum.sort();
+//
+//   // Print the sorted list
+//   print(myNum);
+// }
